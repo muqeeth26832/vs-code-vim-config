@@ -1,0 +1,211 @@
+// default
+// {
+//     "code-runner.runInTerminal": true,
+//     "files.autoSave": "afterDelay",
+//     "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+//     "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+//     "editor.fontSize": 18,
+// "editor.fontLigatures": true,
+
+// }
+// this is from Melkey
+{
+  "editor.formatOnSave": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.linkedEditing": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0.5,
+  "launch": {},
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.statusBar.visible": true, // bottom bar visibility
+  "editor.minimap.enabled": true, // side map
+  "breadcrumbs.enabled": false, // jfl>dsjf;> yeah that what is on top of this workbench
+  "workbench.iconTheme": "material-icon-theme",
+  "update.showReleaseNotes": false,
+  "zenMode.hideLineNumbers": false,
+  // "editor.lineNumbers": "relative", // make numbers relative for easy vim motions
+
+  // "terminal.integrated.fontFamily": "Hack NF",
+
+  "editor.fontLigatures": true,
+  "vim.timeout": 250,
+  "vim.useSystemClipboard": true, // i mean now yank and ctrl both registors are the same  if this true
+
+  // to use ctrl keys
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-f>": true,
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-x>": false
+  },
+
+  "vim.highlightedyank.enable": true,
+  // "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)", // this is default
+  // "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.textColor": "white",
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false, // very nice
+
+  // "code-runner.runInTerminal": true,
+  "files.autoSave": "afterDelay",
+  // "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  // "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'CaskaydiaCove NF'",
+  // "editor.fontFamily": "'MesloLGS NF'",
+
+  // "teminal.integrated.fontFamily": "'Hack NF",
+  // "workbench.activityBar.location": "hidden" // hide leftmost bar i need it
+  // VIM STUFF
+
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  // personal added stuff
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    //FILE TREE
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["leader", "n", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+
+    // NICE TO HAVE
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    // {
+    //   "before": ["<leader>", "c", "a"],
+    //   "commands": ["editor.action.quickFix"]
+    // },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "One Dark Pro",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+
+  // vim pasting problem
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    }
+  ],
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.autohide": true,
+  "editor.minimap.scale": 2,
+  "editor.minimap.renderCharacters": false,
+  "editor.tabCompletion": "on",
+  "terminal.integrated.shellIntegration.enabled": false,
+  "vim.startInInsertMode": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell"
+}
