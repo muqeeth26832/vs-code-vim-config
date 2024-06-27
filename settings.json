@@ -44,7 +44,7 @@
 
   "vim.highlightedyank.enable": true,
   // "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)", // this is default
-  // "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
   "vim.highlightedyank.textColor": "white",
   "editor.wordWrap": "on",
   "explorer.compactFolders": false, // very nice
@@ -100,16 +100,16 @@
 
     //FILE TREE
     {
-      "before": ["leader", "e"],
+      "before": ["leader", "t"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
-      "before": ["leader", "n", "e"],
-      "commands": ["workbench.explorer.fileView.focus"]
+      "before": ["leader",  "e"],
+      "commands": ["workbench.explorer.fileView.focus"],
     },
     {
       "before": ["<leader>", "f"],
-      "commands": ["revealInExplorer"]
+      "commands": ["workbench.action.quickOpen"]
     },
 
     // NICE TO HAVE
@@ -117,7 +117,6 @@
     { "before": ["leader", "q"], "commands": [":q!"] },
     { "before": ["leader", "x"], "commands": [":x!"] },
 
-    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     // {
     //   "before": ["<leader>", "c", "a"],
