@@ -1,0 +1,192 @@
+{
+  // ===== Editor General Settings =====
+  "editor.formatOnSave": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.linkedEditing": true,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "'fonts',JetBrainsMono NF', 'JetBrains Mono', monospace",
+  "editor.fontLigatures": true,
+  "editor.tabCompletion": "on",
+  "files.autoSave": "afterDelay",
+
+  // ===== Editor Visual Settings =====
+  "editor.minimap.enabled": true,
+  "editor.minimap.autohide": true,
+  "editor.minimap.scale": 2,
+  "editor.minimap.renderCharacters": false,
+  "breadcrumbs.enabled": false,
+  "workbench.statusBar.visible": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dark Chai",
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+
+  // ===== Vim Configuration =====
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.timeout": 250,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.startInInsertMode": false,
+
+  // Vim Highlighting
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.textColor": "white",
+
+  // Vim Key Handling
+  "vim.handleKeys": {
+    "<C-f>": true,
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-x>": false
+  },
+
+  // Vim Insert Mode Keybindings
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+
+  // Vim Normal Mode Keybindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Navigation
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // Splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // Pane Navigation
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    // File Management
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+
+    // Code Actions
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] }
+  ],
+
+  // Vim Visual Mode Keybindings
+  "vim.visualModeKeyBindings": [
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+
+  // Vim Visual Mode Non-Recursive Keybindings
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    }
+  ],
+
+  // ===== Language Specific Settings =====
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+
+  // ===== Terminal Settings =====
+  "terminal.integrated.shellIntegration.enabled": false,
+
+  "terminal.integrated.fontFamily": "'JetBrainsMono NF','JetBrains Mono',monospace",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+
+  // ===== Miscellaneous Settings =====
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "update.showReleaseNotes": false,
+  "zenMode.hideLineNumbers": false,
+  "code-runner.runInTerminal": true,
+  "go.toolsManagement.autoUpdate": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "window.zoomLevel": 0,
+  "launch": {},
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  }
+}
